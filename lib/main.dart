@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() => runApp(Login());
 
@@ -24,7 +25,7 @@ class _LoginState extends State<Login> {
         body: Stack(
 
         children: [
-          
+
           Container(
             decoration: BoxDecoration(
               color: Color(0xffE5E5E5),
@@ -39,28 +40,23 @@ class _LoginState extends State<Login> {
             ),
           ),
            Column(
+             mainAxisAlignment: MainAxisAlignment.end ,
             children: [
-              Expanded(
-              child :Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                    color: Color(0xffE5E5E5),
-                    height: 157,
-                    width: 161,
-                    child: InkWell(
-                      child: Card(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0)),
-                        //elevation: 50.0,
-                        margin: EdgeInsets.all(20),
-                        child:  Image.network('assets/proj.png'),
-                      ),
-                      onTap: () {print("Hello");},
+                  InkWell(
+                    child: Card(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0)),
+                      //elevation: 50.0,
+                      margin: EdgeInsets.all(20),
+                      child:  Image.network('assets/proj.png'),
                     ),
-
+                    onTap: () {print("Hello");},
                   ),
+
                   InkWell(
                     child: Container(
                       color: Colors.grey,
@@ -79,10 +75,7 @@ class _LoginState extends State<Login> {
 
                 ],
               ),
-              ),
-              Expanded(
-
-                child:Row(
+              Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     InkWell(
@@ -119,7 +112,7 @@ class _LoginState extends State<Login> {
 
                 ],
               ),
-              ),
+
             ],
 //               mainAxisAlignment: MainAxisAlignment.spaceAround,
 //               children: [
