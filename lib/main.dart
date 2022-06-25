@@ -4,14 +4,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-void main() => runApp(Login());
+void main() => runApp(Home());
 
-class Login extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _LoginState createState() => _LoginState();
+  _Homepage createState() => _Homepage();
 }
 
-class _LoginState extends State<Login> {
+class _Homepage extends State {
   @override
   // ignore: dead_code
   Widget build(BuildContext context) {
