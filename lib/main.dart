@@ -103,8 +103,10 @@ class _Homepage extends State {
                             children: [
 
                               Image.asset('assets/profile.png'),
-
-                              Image.asset('assets/pro.png')],
+                              Center(
+                                child: Image.asset('assets/pro.png'),
+                              ),
+                            ],
                           ),
                         ),
                         onTap: () {
