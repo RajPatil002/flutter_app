@@ -16,99 +16,122 @@ class _Homepage extends State {
   // ignore: dead_code
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:false ,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-       // appBar: AppBar(
-       //   title: Text("Card"),
-       // ),
-        body: Stack(
-
-        children: [
-
-          Container(
-            decoration: BoxDecoration(
-              color: Color(0xffE5E5E5),
-            ),
-            child: Align(
-              alignment: Alignment(-2.0,-1.99),
-              child: Image.asset(
-                'assets/bgimage.png',
-                height: 500,
-                width: 1300,
-                fit: BoxFit.contain,
-
+        // appBar: AppBar(
+        //   title: Text("Card"),
+        // ),
+        body: Center(
+          child: Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xffE5E5E5),
+                ),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: Image.asset(
+                    'assets/bgimage.png',
+                    height: 500,
+                    width: 1300,
+                    fit: BoxFit.contain,
+                  ),
+                ),
               ),
-            ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Align(
+                    alignment: Alignment(0.0,5.0),
+                    child: ClipOval(
+                      child: Container(
+                        width: 104,
+                        height: 104,
+                        color: Colors.white,
+                        child: Center(
+                          child: Image.asset(
+                            'assets/user.png',
+                            fit: BoxFit.cover,
+
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        child: Card(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          //elevation: 50.0,
+                          margin: EdgeInsets.all(20),
+                          child: Image.asset('assets/proj.png'),
+                        ),
+                        onTap: () {
+                          print("Project");
+                        },
+                      ),
+                      InkWell(
+                        child: Card(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          //elevation: 50.0,
+                          margin: EdgeInsets.all(20),
+                          child: Image.asset('assets/dash.png'),
+                        ),
+                        onTap: () {
+                          print("Dashboard");
+                        },
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        child: Card(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          //elevation: 50.0,
+                          margin: EdgeInsets.all(20),
+                          child: Stack(
+                            children: [
+
+                              Image.asset('assets/profile.png'),
+
+                              Image.asset('assets/pro.png')],
+                          ),
+                        ),
+                        onTap: () {
+                          print("Profile");
+                        },
+                      ),
+                      InkWell(
+                        child: Card(
+                          color: Colors.white,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0)),
+                          //elevation: 50.0,
+                          margin: EdgeInsets.all(20),
+                          child: Image.asset('assets/contact_us.png'),
+                        ),
+                        onTap: () {
+                          print("Contact Us");
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
-           Expanded(
-               child: Column(
-                 mainAxisAlignment: MainAxisAlignment.end ,
-                 children: [
-                   Container(
-                     child: Text("Vishwas",style: TextStyle(color: Colors.black,fontSize: 20.0)),
-                   ),
-                   Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                     children: [
-                       InkWell(
-                         child: Card(
-                           color: Colors.white,
-                           shape: RoundedRectangleBorder(
-                               borderRadius: BorderRadius.circular(30.0)),
-                           //elevation: 50.0,
-                           margin: EdgeInsets.all(20),
-                           child:  Image.asset('assets/proj.png'),
-                         ),
-                         onTap: () {print("Project");},
-                       ),
 
-                       InkWell(
-                         child: Card(
-                           color: Colors.white,
-                           shape: RoundedRectangleBorder(
-                               borderRadius: BorderRadius.circular(30.0)),
-                           //elevation: 50.0,
-                           margin: EdgeInsets.all(20),
-                           child: Image.asset('assets/dash.png'),
-                         ),
 
-                         onTap: () {print("Dashboard");},
-                       ),
-
-                     ],
-                   ),
-                   Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                     children: [
-                       InkWell(
-                         child: Card(
-                           color: Colors.white,
-                           shape: RoundedRectangleBorder(
-                               borderRadius: BorderRadius.circular(30.0)),
-                           //elevation: 50.0,
-                           margin: EdgeInsets.all(20),
-                           child: Image.asset('assets/profile.png'),
-                         ),
-                         onTap: () {print("Profile");},
-                       ),
-                       InkWell(
-                         child: Card(
-                           color: Colors.white,
-                           shape: RoundedRectangleBorder(
-                               borderRadius: BorderRadius.circular(30.0)),
-                           //elevation: 50.0,
-                           margin: EdgeInsets.all(20),
-                           child: Image.asset('assets/contact_us.png'),
-                         ),
-                         onTap: () {print("Contact Us");},
-                       ),
-
-                     ],
-                   ),
-
-                 ],
-               ),
-           ),
 
 //               mainAxisAlignment: MainAxisAlignment.spaceAround,
 //               children: [
@@ -175,7 +198,6 @@ class _Homepage extends State {
 //           ],
 //         )
 
-        ],
         ),
       ),
     );
