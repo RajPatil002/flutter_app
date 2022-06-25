@@ -17,11 +17,10 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner:false ,
-      theme: ThemeData(accentColor: Colors.black),
       home: Scaffold(
-//        appBar: AppBar(
-//          title: Text("Card"),
-//        ),
+       // appBar: AppBar(
+       //   title: Text("Card"),
+       // ),
         body: Stack(
 
         children: [
@@ -31,89 +30,86 @@ class _LoginState extends State<Login> {
               color: Color(0xffE5E5E5),
             ),
             child: Align(
-              alignment: Alignment(0.0,-1.07),
+              alignment: Alignment(-2.0,-1.99),
               child: Image.asset(
-                  'assets/bgimage.jpg',
+                'assets/bgimage.png',
                 height: 500,
-                width: 700,
+                width: 1300,
+                fit: BoxFit.contain,
+
               ),
             ),
           ),
-           Column(
-             mainAxisAlignment: MainAxisAlignment.end ,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  InkWell(
-                    child: Card(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0)),
-                      //elevation: 50.0,
-                      margin: EdgeInsets.all(20),
-                      child:  Image.network('assets/proj.png'),
-                    ),
-                    onTap: () {print("Hello");},
-                  ),
+           Expanded(
+               child: Column(
+                 mainAxisAlignment: MainAxisAlignment.end ,
+                 children: [
+                   Container(
+                     child: Text("Vishwas",style: TextStyle(color: Colors.black,fontSize: 20.0)),
+                   ),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                     children: [
+                       InkWell(
+                         child: Card(
+                           color: Colors.white,
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(30.0)),
+                           //elevation: 50.0,
+                           margin: EdgeInsets.all(20),
+                           child:  Image.asset('assets/proj.png'),
+                         ),
+                         onTap: () {print("Project");},
+                       ),
 
-                  InkWell(
-                    child: Container(
-                      color: Colors.grey,
-                      height: 200,
-                      width: 200,
-                      child: Card(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0)),
-                        //elevation: 50.0,
-                        margin: EdgeInsets.all(20),
-                      ),
-                    ),
-                    onTap: () {},
-                  ),
+                       InkWell(
+                         child: Card(
+                           color: Colors.white,
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(30.0)),
+                           //elevation: 50.0,
+                           margin: EdgeInsets.all(20),
+                           child: Image.asset('assets/dash.png'),
+                         ),
 
-                ],
-              ),
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    InkWell(
-                      child: Container(
+                         onTap: () {print("Dashboard");},
+                       ),
 
-                        color: Colors.grey,
-                        height: 200,
-                        width: 200,
-                        child: Card(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0)),
-                        //elevation: 50.0,
-                        margin: EdgeInsets.all(20),
-                      ),
-                    ),
-                    onTap: () {},
-                  ),
-                  InkWell(
-                    child: Container(
-                      color: Colors.grey,
-                      height: 200,
-                      width: 200,
-                      child: Card(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0)),
-                        //elevation: 50.0,
-                        margin: EdgeInsets.all(20),
-                      ),
-                    ),
-                    onTap: () {},
-                  ),
+                     ],
+                   ),
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                     children: [
+                       InkWell(
+                         child: Card(
+                           color: Colors.white,
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(30.0)),
+                           //elevation: 50.0,
+                           margin: EdgeInsets.all(20),
+                           child: Image.asset('assets/profile.png'),
+                         ),
+                         onTap: () {print("Profile");},
+                       ),
+                       InkWell(
+                         child: Card(
+                           color: Colors.white,
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(30.0)),
+                           //elevation: 50.0,
+                           margin: EdgeInsets.all(20),
+                           child: Image.asset('assets/contact_us.png'),
+                         ),
+                         onTap: () {print("Contact Us");},
+                       ),
 
-                ],
-              ),
+                     ],
+                   ),
 
-            ],
+                 ],
+               ),
+           ),
+
 //               mainAxisAlignment: MainAxisAlignment.spaceAround,
 //               children: [
 //                 Container(
@@ -178,7 +174,7 @@ class _LoginState extends State<Login> {
 //
 //           ],
 //         )
-          ),
+
         ],
         ),
       ),
