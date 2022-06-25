@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+//import 'package:flutter/widgets.dart';
 
 void main() => runApp(Home());
 
@@ -24,17 +24,19 @@ class _Homepage extends State {
         body: Center(
           child: Stack(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Color(0xffE5E5E5),
-                ),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Image.asset(
-                    'assets/bgimage.png',
-                    height: 500,
-                    width: 1300,
-                    fit: BoxFit.contain,
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xffE5E5E5),
+                  ),
+                  child: Align(
+                    alignment: Alignment.topCenter,
+                    child: Image.asset(
+                      'assets/bgimage.png',
+                      height: 350,
+                      width: 1700,
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),
@@ -42,7 +44,7 @@ class _Homepage extends State {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Align(
-                    alignment: Alignment(0.0,5.0),
+                    alignment: Alignment(0.0, 5.0),
                     child: ClipOval(
                       child: Container(
                         width: 104,
@@ -52,7 +54,6 @@ class _Homepage extends State {
                           child: Image.asset(
                             'assets/user.png',
                             fit: BoxFit.cover,
-
                           ),
                         ),
                       ),
@@ -99,15 +100,7 @@ class _Homepage extends State {
                               borderRadius: BorderRadius.circular(30.0)),
                           //elevation: 50.0,
                           margin: EdgeInsets.all(20),
-                          child: Stack(
-                            children: [
-
-                              Image.asset('assets/profile.png'),
-                              Center(
-                                child: Image.asset('assets/pro.png'),
-                              ),
-                            ],
-                          ),
+                          child: Image.asset('assets/profile.png'),
                         ),
                         onTap: () {
                           print("Profile");
@@ -132,8 +125,6 @@ class _Homepage extends State {
               ),
             ],
           ),
-
-
 
 //               mainAxisAlignment: MainAxisAlignment.spaceAround,
 //               children: [
@@ -199,7 +190,6 @@ class _Homepage extends State {
 //
 //           ],
 //         )
-
         ),
       ),
     );
